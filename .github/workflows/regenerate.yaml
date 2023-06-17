@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Create a fresh virtual environment and generate formula
       run: |
-        python -m venv venv
+        python3 -m venv venv
         source venv/bin/activate
         venv/bin/pip install llm homebrew-pypi-poet
         poet -f llm > Formula/llm.rb
@@ -21,7 +21,7 @@ jobs:
         rm -rf venv
     - name: Replace description and test
       run: |
-        python -c "
+        python3 -c "
         import re
         content = open('Formula/llm.rb').read()
         content = re.sub(r'desc \"Shiny new formula\"', 'desc \"Access large language models from the command-line\"', content)
