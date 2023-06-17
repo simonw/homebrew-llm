@@ -3,8 +3,8 @@ class Llm < Formula
 
   desc "Access large language models from the command-line"
   homepage "https://github.com/simonw/llm"
-  url "https://files.pythonhosted.org/packages/32/15/0b31a634ae874d65b75953efe2d7bdd527d7994253ed81e5ac82505ba3de/llm-0.4.tar.gz"
-  sha256 "d7a9f905e1a1549c656f6c697f1e8e7c1015f37cf52ed40fb9e1fbf7a28b8962"
+  url "https://files.pythonhosted.org/packages/30/94/ba05f27ac047bc1bbed83ce59c1db040a7a8547c60330a636d501893082e/llm-0.4.1.tar.gz"
+  sha256 "1bafc4ade57bd7557dad4a7cffb406c7054906ff698109cb6aa996d3f53d41a9"
 
   depends_on "python3"
 
