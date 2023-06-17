@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   regenerate:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
     - name: Create a fresh virtual environment and generate formula
