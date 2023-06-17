@@ -17,6 +17,8 @@ jobs:
         source venv/bin/activate
         venv/bin/pip install llm homebrew-pypi-poet
         poet -f llm > Formula/llm.rb
+        deactivate
+        rm -rf venv
     - name: Replace description and test
       run: |
         python -c "
