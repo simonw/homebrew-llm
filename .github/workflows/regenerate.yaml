@@ -1,0 +1,34 @@
+name: Regenerate formula
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Create a fresh virtual environment and generate formula
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        venv/bin/pip install llm homebrew-pypi-poet
+        poet -f llm > Formula/llm.rb
+    - name: Replace description and test
+      run: |
+        python -c "
+        import re
+        content = open('Formula/llm.rb').read()
+        content = re.sub(r'desc \"Shiny new formula\"', 'desc \"Access large language models from the command-line\"', content)
+        content = re.sub(
+            r'test do.*?end',
+            'test do\\n    assert_match "llm, version", shell_output("#{bin}/llm --version")\\n  end',
+            content,
+            flags=re.DOTALL
+        )
+        open('Formula/llm.rb', 'w').write(content)
+        "
+        cat Formula/llm.rb
