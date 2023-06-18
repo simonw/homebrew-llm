@@ -16,7 +16,7 @@ jobs:
         python3 -m venv venv
         source venv/bin/activate
         venv/bin/pip install strip-tags homebrew-pypi-poet
-        poet -f llm > Formula/strip-tags.rb
+        poet -f strip-tags > Formula/strip-tags.rb
         deactivate
         rm -rf venv
     - name: Replace description and test
