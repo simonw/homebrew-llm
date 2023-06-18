@@ -35,7 +35,6 @@ jobs:
         "
         cat Formula/strip-tags.rb
     - name: Commit and push
-      if: false
       run: |-
         git config user.name "Automated"
         git config user.email "actions@users.noreply.github.com"
