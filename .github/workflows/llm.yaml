@@ -1,4 +1,4 @@
-name: Regenerate formula
+name: Publish llm
 
 on:
   workflow_dispatch:
