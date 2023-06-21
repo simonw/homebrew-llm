@@ -19,12 +19,18 @@ jobs:
         poet -f ttok > Formula/ttok.rb
         deactivate
         rm -rf venv
-    - name: Replace description and test
+    - name: Replace description and test and depends
       run: |
         python3 -c "
         import re
         content = open('Formula/ttok.rb').read()
         content = re.sub(r'desc \"Shiny new formula\"', 'desc \"Count and truncate text based on tokens\"', content)
+        content = content.replace('depends_on \"python3\"', (
+            'depends_on \"python3\"\n'
+            '# To build tiktoken:\\n'
+            'depends_on \"pkg-config\" => :build\\n'
+            'depends_on \"rust\" => :build\\n'
+        ))
         content = re.sub(
             r'test do.*?end',
             'test do\\n    assert_match \"ttok, version\", shell_output(\"#{bin}/ttok --version\")\\n  end',
