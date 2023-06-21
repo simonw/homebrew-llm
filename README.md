@@ -1,6 +1,12 @@
 # homebrew-llm
 
-Homebrew formula for installing the [LLM](https://llm.datasette.io/) family of tools.
+Homebrew formulas for installing the [LLM](https://llm.datasette.io/) family of tools.
+
+If you have previously installed packages from this repository you may need to run `brew update` to ensure you have the latest versions of the formulas:
+
+```bash
+brew update
+```
 
 ## Installing llm
 
