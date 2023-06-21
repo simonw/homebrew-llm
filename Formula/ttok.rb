@@ -7,9 +7,9 @@ class Ttok < Formula
   sha256 "8b9439f71be222e117392b2c8b38bb94e416341ccb938191a56589ec3353951a"
 
   depends_on "python3"
-# To build tiktoken:
-depends_on "pkg-config" => :build
-depends_on "rust" => :build
+  # To build tiktoken:
+  depends_on "pkg-config" => :build
+  depends_on "rust" => :build
 
 
   resource "certifi" do
