@@ -38,3 +38,15 @@ Example - this finds the `def inspect_hash()` function and explains what it does
 ```bash
 symbex inspect_hash | llm --system 'explain this code'
 ```
+## Installing ttok
+
+[ttok](https://github.com/simonw/ttok) is a tool for counting tokens. This is useful if you want to check that your content is not going to exceed the size limits for different LLM models.
+```bash
+brew install simonw/llm/ttok
+```
+This installation will also bring in a copy of Rust, if one is not yet available in your Homebrew setup.
+
+Example, counting the total number of tokens in all of your test functions.
+```bash
+symbex 'test_*' | ttok
+```
