@@ -27,9 +27,9 @@ jobs:
         content = re.sub(r'desc \"Shiny new formula\"', 'desc \"Count and truncate text based on tokens\"', content)
         content = content.replace('depends_on \"python3\"', (
             'depends_on \"python3\"\n'
-            '# To build tiktoken:\\n'
-            'depends_on \"pkg-config\" => :build\\n'
-            'depends_on \"rust\" => :build\\n'
+            '  # To build tiktoken:\\n'
+            '  depends_on \"pkg-config\" => :build\\n'
+            '  depends_on \"rust\" => :build\\n'
         ))
         content = re.sub(
             r'test do.*?end',
