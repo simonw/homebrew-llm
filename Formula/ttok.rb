@@ -7,9 +7,10 @@ class Ttok < Formula
   sha256 "8b9439f71be222e117392b2c8b38bb94e416341ccb938191a56589ec3353951a"
 
   depends_on "python3"
-  # To build tiktoken:
-  depends_on "pkg-config" => :build
-  depends_on "rust" => :build
+# To build tiktoken:
+depends_on "pkg-config" => :build
+depends_on "rust" => :build
+
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/93/71/752f7a4dd4c20d6b12341ed1732368546bc0ca9866139fe812f6009d9ac7/certifi-2023.5.7.tar.gz"
