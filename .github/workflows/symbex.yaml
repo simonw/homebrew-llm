@@ -1,0 +1,45 @@
+name: Publish symbex
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Create a fresh virtual environment and generate formula
+      run: |
+        python3 -m venv venv
+        source venv/bin/activate
+        venv/bin/pip install symbex homebrew-pypi-poet
+        poet -f symbex > Formula/symbex.rb
+        deactivate
+        rm -rf venv
+    - name: Replace description and test
+      run: |
+        python3 -c "
+        import re
+        content = open('Formula/symbex.rb').read()
+        content = re.sub(r'desc \"Shiny new formula\"', 'desc \"Find the Python code for specified symbols\"', content)
+        content = re.sub(
+            r'test do.*?end',
+            'test do\\n    assert_match \"symbex, version\", shell_output(\"#{bin}/symbex --version\")\\n  end',
+            content,
+            flags=re.DOTALL
+        )
+        open('Formula/symbex.rb', 'w').write(content)
+        "
+        cat Formula/symbex.rb
+    - name: Commit and push
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Update symbex: ${timestamp}" || exit 0
+        git pull --rebase
+        git push
