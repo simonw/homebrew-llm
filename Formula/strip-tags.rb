@@ -3,8 +3,8 @@ class StripTags < Formula
 
   desc "CLI tool for stripping tags from HTML"
   homepage "https://github.com/simonw/strip-tags"
-  url "https://files.pythonhosted.org/packages/f9/97/deabda2e5390a15f8ddda5e53a98aedc01bbf6197f96fa598e800eac060d/strip-tags-0.4.1.tar.gz"
-  sha256 "f0ea0b5ceac6f724948a758462662eda2479c60314c24cfd005a60d34883f2da"
+  url "https://files.pythonhosted.org/packages/53/99/d7b526fdaa31028450afeb33edbb407d014bb9d1d63f693ab9810a3358d3/strip-tags-0.5.tar.gz"
+  sha256 "2ffa18e4941544c0491699dc5f86858f594fb6cc22033df7ec9fee14e540f1dc"
 
   depends_on "python3"
 
