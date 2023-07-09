@@ -3,8 +3,8 @@ class StripTags < Formula
 
   desc "CLI tool for stripping tags from HTML"
   homepage "https://github.com/simonw/strip-tags"
-  url "https://files.pythonhosted.org/packages/53/99/d7b526fdaa31028450afeb33edbb407d014bb9d1d63f693ab9810a3358d3/strip-tags-0.5.tar.gz"
-  sha256 "2ffa18e4941544c0491699dc5f86858f594fb6cc22033df7ec9fee14e540f1dc"
+  url "https://files.pythonhosted.org/packages/59/22/1b50f0c98d35c7e958b080aa7947a90bd74b3dc7e72b759034727edc10e3/strip-tags-0.5.1.tar.gz"
+  sha256 "841a158bc8f57e3a891d45132e78c1eb8fdd9b978b8a40e68028446118dedad3"
 
   depends_on "python3"
 
@@ -14,8 +14,8 @@ class StripTags < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/77/88/b0cc5fe95c31c301e9823ea9b028f669c0dcfa205ff71111037a5ed4892c/click-8.1.4.tar.gz"
+    sha256 "b97d0c74955da062a7d4ef92fadb583806a585b2ea81958a81bd72726cbb8e37"
   end
 
   resource "html5lib" do
