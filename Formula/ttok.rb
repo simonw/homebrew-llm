@@ -3,8 +3,8 @@ class Ttok < Formula
 
   desc "Count and truncate text based on tokens"
   homepage "https://github.com/simonw/ttok"
-  url "https://files.pythonhosted.org/packages/d8/d3/8f895865f5aa0bb38130383ac103c4e4204b93fdff7a1a301d5e81b2c588/ttok-0.1.tar.gz"
-  sha256 "8b9439f71be222e117392b2c8b38bb94e416341ccb938191a56589ec3353951a"
+  url "https://files.pythonhosted.org/packages/a1/9e/1f5960f74227414b1c421a22e86ec3e35ae1c4f2a4d0f8ae4770384c7271/ttok-0.2.tar.gz"
+  sha256 "b5ec7b39358194bbd2cae50fc589e5f80ac3bb173ae39a7ea4d523e2c0a2d745"
 
   depends_on "python3"
   # To build tiktoken:
@@ -18,13 +18,13 @@ class Ttok < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/ff/d7/8d757f8bd45be079d76309248845a04f09619a7b17d6dfc8c9ff6433cac2/charset-normalizer-3.1.0.tar.gz"
-    sha256 "34e0a2f9c370eb95597aae63bf85eb5e96826d81e3dcf88b8886012906f509b5"
+    url "https://files.pythonhosted.org/packages/2a/53/cf0a48de1bdcf6ff6e1c9a023f5f523dfe303e4024f216feac64b6eb7f67/charset-normalizer-3.2.0.tar.gz"
+    sha256 "3bb3d25a8e6c0aedd251753a79ae98a093c7e7b471faa3aa9a93a81431987ace"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/77/88/b0cc5fe95c31c301e9823ea9b028f669c0dcfa205ff71111037a5ed4892c/click-8.1.4.tar.gz"
+    sha256 "b97d0c74955da062a7d4ef92fadb583806a585b2ea81958a81bd72726cbb8e37"
   end
 
   resource "idna" do
