@@ -3,8 +3,8 @@ class Llm < Formula
 
   desc "Access large language models from the command-line"
   homepage "https://github.com/simonw/llm"
-  url "https://files.pythonhosted.org/packages/30/94/ba05f27ac047bc1bbed83ce59c1db040a7a8547c60330a636d501893082e/llm-0.4.1.tar.gz"
-  sha256 "1bafc4ade57bd7557dad4a7cffb406c7054906ff698109cb6aa996d3f53d41a9"
+  url "https://files.pythonhosted.org/packages/27/0f/f4afb3bc87c17b93d913e56ea09dedbad06a4f6667ee6017f24171adee75/llm-0.5.tar.gz"
+  sha256 "e0070239b25b6812e20aef7d2e057ca5071269ca3e201d15371ff163090fb7b5"
 
   depends_on "python3"
 
@@ -16,6 +16,11 @@ class Llm < Formula
   resource "aiosignal" do
     url "https://files.pythonhosted.org/packages/ae/67/0952ed97a9793b4958e5736f6d2b346b414a2cd63e82d05940032f45b32f/aiosignal-1.3.1.tar.gz"
     sha256 "54cd96e15e1649b75d6c87526a6ff0b6c1b0dd3459f43d9ca11d48c339b68cfc"
+  end
+
+  resource "annotated-types" do
+    url "https://files.pythonhosted.org/packages/42/97/41ccb6acac36fdd13592a686a21b311418f786f519e5794b957afbcea938/annotated_types-0.5.0.tar.gz"
+    sha256 "47cdc3490d9ac1506ce92c7aaa76c579dc3509ff11e098fc867e5130ab7be802"
   end
 
   resource "async-timeout" do
@@ -34,13 +39,13 @@ class Llm < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/ff/d7/8d757f8bd45be079d76309248845a04f09619a7b17d6dfc8c9ff6433cac2/charset-normalizer-3.1.0.tar.gz"
-    sha256 "34e0a2f9c370eb95597aae63bf85eb5e96826d81e3dcf88b8886012906f509b5"
+    url "https://files.pythonhosted.org/packages/2a/53/cf0a48de1bdcf6ff6e1c9a023f5f523dfe303e4024f216feac64b6eb7f67/charset-normalizer-3.2.0.tar.gz"
+    sha256 "3bb3d25a8e6c0aedd251753a79ae98a093c7e7b471faa3aa9a93a81431987ace"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/59/87/84326af34517fca8c58418d148f2403df25303e02736832403587318e9e8/click-8.1.3.tar.gz"
-    sha256 "7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"
+    url "https://files.pythonhosted.org/packages/77/88/b0cc5fe95c31c301e9823ea9b028f669c0dcfa205ff71111037a5ed4892c/click-8.1.4.tar.gz"
+    sha256 "b97d0c74955da062a7d4ef92fadb583806a585b2ea81958a81bd72726cbb8e37"
   end
 
   resource "click-default-group-wheel" do
@@ -68,14 +73,29 @@ class Llm < Formula
     sha256 "2483095c7db1eee274cebac79e315a986c4e55207bb4fa7b82d185b3a2ed9536"
   end
 
+  resource "pluggy" do
+    url "https://files.pythonhosted.org/packages/8a/42/8f2833655a29c4e9cb52ee8a2be04ceac61bcff4a680fb338cbd3d1e322d/pluggy-1.2.0.tar.gz"
+    sha256 "d12f0c4b579b15f5e054301bb226ee85eeeba08ffec228092f8defbaa3a4c4b3"
+  end
+
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/ec/0a/cf955f8bb3b9498d554522cfe7cb9b019ba9f8b86e2879009f604207b72c/pydantic-1.10.9.tar.gz"
-    sha256 "95c70da2cd3b6ddf3b9645ecaa8d98f3d80c606624b6d245558d202cd23ea3be"
+    url "https://files.pythonhosted.org/packages/3c/39/e526f3ca06e062e0ad773555f5349ff5d9ed50bfa62c45df8e74fff9ff14/pydantic-2.0.2.tar.gz"
+    sha256 "b802f5245b8576315fe619e5989fd083448fa1258638ef9dac301ca60878396d"
+  end
+
+  resource "pydantic-core" do
+    url "https://files.pythonhosted.org/packages/66/68/9703e44f0bcc29eeaacb1c063675687524646a1bbe3c4527d45475cf120e/pydantic_core-2.1.2.tar.gz"
+    sha256 "d2c790f0d928b672484eac4f5696dd0b78f3d6d148a641ea196eb49c0875e30a"
   end
 
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
     sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
+  end
+
+  resource "python-ulid" do
+    url "https://files.pythonhosted.org/packages/e8/8b/0580d8ee0a73a3f3869488856737c429cbaa08b63c3506275f383c4771a8/python-ulid-1.1.0.tar.gz"
+    sha256 "5fb5e4a91db8ca93e8938a613360b3def299b60d41f847279a8c39c9b2e9c65e"
   end
 
   resource "PyYAML" do
@@ -99,8 +119,8 @@ class Llm < Formula
   end
 
   resource "sqlite-utils" do
-    url "https://files.pythonhosted.org/packages/1a/95/b6fe852980c9494bf8a5e99d017cc6b864f9807a3e082c7837c267302217/sqlite-utils-3.32.1.tar.gz"
-    sha256 "6c28fe32fcebd658a1691dedfa4d111499ad302cc0139c5a5893a590d461848a"
+    url "https://files.pythonhosted.org/packages/99/48/b974a270fd710e62c5ab863dc216cf3ffe26b5108ffb5d64ddeba1786bce/sqlite-utils-3.33.tar.gz"
+    sha256 "be779936dadb9decef511a46f280bd94683d385625f69a65730fb6e00e5f2656"
   end
 
   resource "tabulate" do
@@ -114,8 +134,8 @@ class Llm < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/42/56/cfaa7a5281734dadc842f3a22e50447c675a1c5a5b9f6ad8a07b467bffe7/typing_extensions-4.6.3.tar.gz"
-    sha256 "d91d5919357fe7f681a9f2b5b4cb2a5f1ef0a1e9f59c4d8ff0d3491e05c0ffd5"
+    url "https://files.pythonhosted.org/packages/3c/8b/0111dd7d6c1478bf83baa1cab85c686426c7a6274119aceb2bd9d35395ad/typing_extensions-4.7.1.tar.gz"
+    sha256 "b75ddc264f0ba5615db7ba217daeb99701ad295353c45f9e95963337ceeeffb2"
   end
 
   resource "urllib3" do
