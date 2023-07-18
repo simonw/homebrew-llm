@@ -3,14 +3,10 @@ class Llm < Formula
 
   desc "Access large language models from the command-line"
   homepage "https://github.com/simonw/llm"
-  url "https://files.pythonhosted.org/packages/27/0f/f4afb3bc87c17b93d913e56ea09dedbad06a4f6667ee6017f24171adee75/llm-0.5.tar.gz"
-  sha256 "e0070239b25b6812e20aef7d2e057ca5071269ca3e201d15371ff163090fb7b5"
+  url "https://files.pythonhosted.org/packages/64/a3/24218c5cdada7e9eac5425bb702d734605d2f16bf8450c3a81571dd34558/llm-0.6.tar.gz"
+  sha256 "6226bcbb4c79affd85870a69a09a5b47aec6bc549c65b620f086253424e3410a"
 
   depends_on "python3"
-
-  # To build Pydantic:
-  depends_on "pkg-config" => :build
-  depends_on "rust" => :build
 
   resource "aiohttp" do
     url "https://files.pythonhosted.org/packages/c2/fd/1ff4da09ca29d8933fda3f3514980357e25419ce5e0f689041edb8f17dab/aiohttp-3.8.4.tar.gz"
@@ -48,8 +44,8 @@ class Llm < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/77/88/b0cc5fe95c31c301e9823ea9b028f669c0dcfa205ff71111037a5ed4892c/click-8.1.4.tar.gz"
-    sha256 "b97d0c74955da062a7d4ef92fadb583806a585b2ea81958a81bd72726cbb8e37"
+    url "https://files.pythonhosted.org/packages/72/bd/fedc277e7351917b6c4e0ac751853a97af261278a4c7808babafa8ef2120/click-8.1.6.tar.gz"
+    sha256 "48ee849951919527a045bfe3bf7baa8a959c423134e1a5b98c05c20ba75a1cbd"
   end
 
   resource "click-default-group-wheel" do
@@ -58,8 +54,8 @@ class Llm < Formula
   end
 
   resource "frozenlist" do
-    url "https://files.pythonhosted.org/packages/e9/10/d629476346112b85c912527b9080944fd2c39a816c2225413dbc0bb6fcc0/frozenlist-1.3.3.tar.gz"
-    sha256 "58bcc55721e8a90b88332d6cd441261ebb22342e238296bb330968952fbb3a6a"
+    url "https://files.pythonhosted.org/packages/8c/1f/49c96ccc87127682ba900b092863ef7c20302a2144b3185412a08480ca22/frozenlist-1.4.0.tar.gz"
+    sha256 "09163bdf0b2907454042edb19f887c6d33806adc71fbd54afc14908bfdc22251"
   end
 
   resource "idna" do
@@ -83,13 +79,13 @@ class Llm < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/3c/39/e526f3ca06e062e0ad773555f5349ff5d9ed50bfa62c45df8e74fff9ff14/pydantic-2.0.2.tar.gz"
-    sha256 "b802f5245b8576315fe619e5989fd083448fa1258638ef9dac301ca60878396d"
+    url "https://files.pythonhosted.org/packages/11/07/106b00ae62297bb3c89b6fbeb571feaf7cbbf6b2ada0e513d756daafd4ce/pydantic-2.0.3.tar.gz"
+    sha256 "94f13e0dcf139a5125e88283fc999788d894e14ed90cf478bcc2ee50bd4fc630"
   end
 
   resource "pydantic-core" do
-    url "https://files.pythonhosted.org/packages/66/68/9703e44f0bcc29eeaacb1c063675687524646a1bbe3c4527d45475cf120e/pydantic_core-2.1.2.tar.gz"
-    sha256 "d2c790f0d928b672484eac4f5696dd0b78f3d6d148a641ea196eb49c0875e30a"
+    url "https://files.pythonhosted.org/packages/57/ea/edff47ad42857534f3abcc87472802b3181041f4e4fbeac988a5ecfcffae/pydantic_core-2.3.0.tar.gz"
+    sha256 "5cfb5ac4e82c47d5dc25b209dd4c3989e284b80109f9e08b33c895080c424b4f"
   end
 
   resource "python-dateutil" do
@@ -103,8 +99,8 @@ class Llm < Formula
   end
 
   resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
   end
 
   resource "requests" do
