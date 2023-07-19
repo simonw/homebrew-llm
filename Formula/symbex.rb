@@ -3,8 +3,8 @@ class Symbex < Formula
 
   desc "Find the Python code for specified symbols"
   homepage "https://github.com/simonw/symbex"
-  url "https://files.pythonhosted.org/packages/14/ad/33a54da57fb12c59ffabdb8c7f06baa85569b58b47379683bf04b82f845c/symbex-1.2.tar.gz"
-  sha256 "3f4f7083b7fb99fe8365bed36f85a053040e892ddcec5ead983016c8024d10b7"
+  url "https://files.pythonhosted.org/packages/44/4c/640ffc740fde44e0ffb1ae40000676b5b0ca2c35003a10b4229c979eb7ff/symbex-1.3.tar.gz"
+  sha256 "795a2992086ec36c652c79f2261c7a8fcf6b91d1f17d3fa7674387a9a4166e3b"
 
   depends_on "python3"
 
