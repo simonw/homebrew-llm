@@ -7,6 +7,7 @@ class Llm < Formula
   sha256 "6226bcbb4c79affd85870a69a09a5b47aec6bc549c65b620f086253424e3410a"
 
   depends_on "python3"
+  depends_on "rust" # required by the build process of pydantic-core (aka maturin)
 
   resource "aiohttp" do
     url "https://files.pythonhosted.org/packages/c2/fd/1ff4da09ca29d8933fda3f3514980357e25419ce5e0f689041edb8f17dab/aiohttp-3.8.4.tar.gz"
