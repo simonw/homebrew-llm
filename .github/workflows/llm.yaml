@@ -25,6 +25,11 @@ jobs:
         import re
         content = open('Formula/llm.rb').read()
         content = re.sub(r'desc \"Shiny new formula\"', 'desc \"Access large language models from the command-line\"', content)
+        content = content.replace('depends_on \"python3\"', (
+            'depends_on \"python3\"\n'
+            '  # Needed by pydantic:\\n'
+            '  depends_on \"rust\" => :build\\n'
+        ))
         content = re.sub(
             r'test do.*?end',
             'test do\\n    assert_match \"llm, version\", shell_output(\"#{bin}/llm --version\")\\n  end',
