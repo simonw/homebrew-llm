@@ -3,14 +3,14 @@ class Symbex < Formula
 
   desc "Find the Python code for specified symbols"
   homepage "https://github.com/simonw/symbex"
-  url "https://files.pythonhosted.org/packages/44/4c/640ffc740fde44e0ffb1ae40000676b5b0ca2c35003a10b4229c979eb7ff/symbex-1.3.tar.gz"
-  sha256 "795a2992086ec36c652c79f2261c7a8fcf6b91d1f17d3fa7674387a9a4166e3b"
+  url "https://files.pythonhosted.org/packages/5c/18/69818467e5cde017d12febe251c0519a71f2cbca3c9957eb5c5e8f76e572/symbex-1.3.1.tar.gz"
+  sha256 "ce825d10d5c20d039322aaa66253e2992b61d3df69818b6f38a07095a7073225"
 
   depends_on "python3"
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/72/bd/fedc277e7351917b6c4e0ac751853a97af261278a4c7808babafa8ef2120/click-8.1.6.tar.gz"
-    sha256 "48ee849951919527a045bfe3bf7baa8a959c423134e1a5b98c05c20ba75a1cbd"
+    url "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz"
+    sha256 "ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"
   end
 
   def install
